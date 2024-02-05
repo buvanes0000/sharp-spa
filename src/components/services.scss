@@ -1,0 +1,109 @@
+@import "/src/app.scss";
+
+// services.scss
+
+.services {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  @media (max-width: 768px) {
+    transform: scale(0.8);
+    position: relative;
+    top: 3rem;
+  }
+
+  .heading_container {
+    position: relative;
+    bottom: 1rem;
+
+    h1 {
+      font-family: Dancing Script;
+      font-size: 4.4rem;
+      font-weight: bolder;
+    }
+  }
+
+  .servie_P {
+    background-color: $primary__white;
+    padding: 1rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    width: 90%;
+
+    @media (max-width: 412px) {
+      font-size: 15px;
+      width: 100%;
+    }
+    p {
+      color: #090707;
+      letter-spacing: 0.1rem;
+      line-height: 2em;
+    }
+  }
+
+  label {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  select {
+    font-size: 1em;
+    padding: 10px;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover {
+      background-color: whitesmoke;
+      color: #000;
+    }
+  }
+
+  .image-container {
+    text-align: center;
+    margin-top: 20px;
+
+    .service_image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 1px solid #010000;
+      border-radius: 50%;
+      transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+}

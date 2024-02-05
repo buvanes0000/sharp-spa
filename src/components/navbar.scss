@@ -1,0 +1,124 @@
+@import "/src/app.scss";
+
+.navbar {
+  position: fixed;
+  background-color: $primary__white;
+
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  border-radius: 10px 30px 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+
+  align-items: center;
+  padding: 1rem;
+  letter-spacing: 1.6px;
+
+  transition: top 0.3s ease; /* Added transition effect for smooth appearance */
+  @media (max-width: 768px) {
+    left: 2rem;
+    max-width: 90%;
+  }
+  @media (max-width: 412px) {
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    max-width: 100%;
+    border-radius: 0px;
+  }
+
+  .nav__link {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: #000000;
+      text-decoration: none;
+      font-size: 18px;
+      opacity: 0.7;
+      cursor: pointer;
+
+      &:hover {
+        color: #7290a4;
+      }
+    }
+  }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: #000;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .nav__link {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+      position: absolute;
+      font-weight: bolder;
+
+      top: 80px;
+      left: 0;
+      right: 0;
+      backdrop-filter: blur(10px);
+      padding: 10px;
+      border-radius: 10px;
+      opacity: 0; /* Initially set opacity to 0 */
+      transition: opacity 0.3s ease; /* Added transition effect for smooth appearance */
+
+      &.open {
+        display: flex;
+        opacity: 1; /* Set opacity to 1 when open */
+      }
+
+      a {
+        font-size: 16px;
+      }
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    &.open {
+      .menu-icon .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-7px, 6px);
+      }
+
+      .menu-icon .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-icon .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-7px, -6px);
+      }
+    }
+  }
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 5/ 2;
+  object-fit: contain;
+
+  margin-right: 20px; /* Adjust the margin as per your design */
+
+  @media (max-width: 412px) {
+    width: 60px;
+    height: 60px;
+  }
+}

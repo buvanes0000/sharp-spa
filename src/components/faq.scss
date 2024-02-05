@@ -1,0 +1,133 @@
+#FAQ {
+  padding: 40px 0;
+  position: relative;
+  top: 5rem;
+  letter-spacing: 1.5px;
+
+  @media (max-width: 968px) {
+    position: relative;
+    top: 20rem;
+  }
+
+  .container {
+    margin: 0 5rem;
+
+    @media (max-width: 412px) {
+      margin: 0 0.5rem;
+      font-size: 10px;
+      padding: 0;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 24px;
+
+      @media (max-width: 612px) {
+        font-size: 16px;
+      }
+    }
+
+    .tab {
+      margin-bottom: 20px;
+
+      .question {
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        @media (max-width: 412px) {
+          font-size: 10px;
+        }
+
+        h2 {
+          background-color: #009688;
+          color: #fff;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 15px;
+          font-size: 16px;
+
+          @media (max-width: 612px) {
+            font-size: 12px;
+          }
+          @media (max-width: 412px) {
+            font-size: 8px;
+          }
+        }
+
+        h3 {
+          font-size: 18px;
+          margin: 0;
+          flex-grow: 1;
+          margin-bottom: 1.4rem;
+          @media (max-width: 412px) {
+            font-size: 10px;
+          }
+          @media (max-width: 612px) {
+            font-size: 12px;
+          }
+        }
+
+        .arrow {
+          margin-left: auto;
+          transform: rotate(0deg);
+          transition: transform 0.3s ease;
+
+          @media (max-width: 612px) {
+            font-size: 12px;
+            position: relative;
+            top: -0.7rem;
+          }
+        }
+
+        &:hover {
+          background-color: #e0f2f1;
+        }
+
+        &.open {
+          .arrow {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .content {
+        display: none;
+        padding: 15px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+
+        p {
+          margin: 0;
+          color: #333;
+          font-weight: bolder;
+
+          @media (max-width: 612px) {
+            font-size: 10px;
+          }
+          @media (max-width: 412px) {
+            font-size: 8px;
+          }
+        }
+      }
+
+      &.open {
+        .arrow {
+          transform: rotate(180deg);
+        }
+
+        .content {
+          display: block;
+        }
+      }
+    }
+  }
+}

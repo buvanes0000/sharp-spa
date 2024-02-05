@@ -1,0 +1,37 @@
+.footer {
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  position: relative;
+  top: 3rem;
+
+  @media (max-width: 968px) {
+    top: 15rem;
+  }
+
+  @media (max-width: 412px) {
+    font-size: 0.8rem;
+  }
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+
+.icon:hover {
+  color: #00bcd4;
+  transform: matrix3d(1);
+}
+a:hover svg {
+  transform: rotate3d(1, 1, 1, 45deg);
+  transition: transform 0.3s ease-in-out;
+}
