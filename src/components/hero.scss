@@ -7,10 +7,13 @@
   justify-content: space-around;
   position: relative;
   bottom: 5rem;
+  margin-top: 8rem;
+  @media (max-width: 968px) {
+    margin-top: 0;
+  }
 
   @media (max-width: 412px) {
     position: relative;
-    margin-top: -10rem;
   }
 
   .hero__content {
